@@ -13,7 +13,7 @@ while true; do
 	esac
 done
 
-for DIR in $(find ${DIR_TO_INDEX} -type d $(test -n $DEPTH && echo -depth $DEPTH)); do
+for DIR in $(find ${DIR_TO_INDEX} $(test -n $DEPTH && echo -maxdepth $DEPTH) -type d); do
 	echo Reindexing "${DIR}"...
 	(
 		echo -e "<html>\n<body>\n<h1>${HEADING}</h1>\n<hr/>\n<pre>"
