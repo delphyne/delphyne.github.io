@@ -2,7 +2,6 @@
 # Heavily inspired, copied, stolen, etc. from http://blog.kaltepoth.de/posts/2010/09/06/github-maven-repositories.html
 
 DIR_TO_INDEX=.m2
-DEPTH=
 HEADING='Directory Listing'
 
 while true; do
@@ -13,7 +12,7 @@ while true; do
 	esac
 done
 
-for DIR in $(find ${DIR_TO_INDEX} $(test -n $DEPTH && echo -maxdepth $DEPTH) -type d); do
+for DIR in $(find ${DIR_TO_INDEX} $(test -n "${DEPTH}" && echo -maxdepth "${DEPTH}") -type d); do
 	echo Reindexing "${DIR}"...
 	(
 		echo -e "<html>\n<body>\n<h1>${HEADING}</h1>\n<hr/>\n<pre>"
