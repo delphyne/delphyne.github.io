@@ -1,0 +1,3 @@
+com.github.delphyne.gradle.plugins.serviceloader_manifest
+com.github.delphyne.gradle.plugins.serviceloader_manifest.extensions
+com.github.delphyne.gradle.plugins.serviceloader_manifest.tasks
